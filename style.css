@@ -1,0 +1,162 @@
+/* Write some CSS below */
+body {
+  font-family: Overpass;
+  color: #404042;
+  font-size: 18px;
+  margin: 0;
+}
+
+h1, h2, h3 {
+  font-family: Chivo;
+}
+
+p {
+  color: #404042;
+  opacity: .7;
+}
+
+a {
+  color: #1A48E3;
+  font-weight: bold;
+  text-decoration: none;
+  transition: .3s;
+}
+
+a:hover {
+  color: #CE2FAE;
+}
+
+.banner {
+  background-image: url('images/background.jpg');
+  /* background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/background.jpg'); */
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+  text-align: center;
+}
+
+.banner h1 {
+  color: white;
+  font-size: 45px;
+  margin: 0;
+}
+
+.banner p {
+  color: white;
+  font-size: 24px;
+  /* Could be used to replace the inline-block property on the button */
+  /* padding-bottom: 20px; */
+}
+
+/* Group things like this doesn't work */
+/* .banner h1, p {
+  color: white;
+} */
+
+.button-blue {
+  background-color: #1A48E3;
+  color: white;
+  padding: 16px 48px;
+  border-radius: 4px;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.button-blue:hover {
+  background-color: #0D1EC6;
+  color: white;
+}
+
+.container {
+  display: flex;
+  width: 800px;
+  /* We need a fixed margin at the top and bottom and one that is automatically calculated at the left and right */
+  margin: 60px auto;
+}
+
+.card-white {
+  background: white;
+  box-shadow: 0 0 16px rgba(0,0,0,0.1);
+  border-radius: 4px;
+  width: 200px;
+  /* Seems a bit hazardous to mee... */
+  /* text-align: center; */
+  padding: 24px;
+  margin: 8px;
+}
+
+.card-white img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 4px;
+  /* Better than the hazardous "text-align: center;" in .card-white */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* A bit useless... */
+/* .card-white h3 {
+  margin-bottom: 0;
+} */
+
+.footer {
+  background-color: #404042;
+  padding: 24px 0;
+  /* display: block;
+  margin-left: auto;
+  margin-right: auto; */
+
+  /* margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px; */
+}
+
+.footer p {
+  color: white;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+
+  /* display: flex;
+  justify-content: space-around;
+  gap: 16px; */
+}
+
+/* Cards media queries */
+@media (max-width: 800px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .card-white {
+    width: auto;
+  }
+}
+
+/* Container media queries */
+@media (min-width: 500px) {
+  .container {
+    width: 400px;
+  }
+}
+
+
+@media (min-width: 800px) {
+  .container {
+    width: 600px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .container {
+    width: 800px;
+  }
+}
